@@ -569,7 +569,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\uC5C4\uB9C8, \uB098 \uC9E4\uB838\uC5B4."
+  m_Text: 
 --- !u!222 &294327521
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -891,13 +891,10 @@ MonoBehaviour:
   sprite_DialogueBox: {fileID: 96898884}
   txt_Dialogue: {fileID: 294327520}
   dialogue:
-  - dialogue: "\uB098 \uC624\uB298 \uC77C \uADF8\uB9CC\uB480\uC5B4 "
+  - dialogue: "\uC544\uB77C\uB9AC\uC57C \uC2DC\uC7A5\uC5D0 \uAC00\uC11C \uAC12 \uBE44\uC2F8\uAC8C
+      \uC18C\uB97C \uD314\uACE0 \uC624\uB834."
     cg: {fileID: 21300000, guid: c0c18927f3cb2574b9e9ca443cfe8928, type: 3}
-  - dialogue: "\uBB50? \uBBF8\uCE5C\uAC70 \uC544\uB2C8\uB0D0\uACE0?"
-    cg: {fileID: 21300000, guid: e64c481e15b72c8478314fecc7fd9851, type: 3}
-  - dialogue: "\uC54C\uC558\uC5B4 \uC18C \uD314\uACE0 \uC624\uBA74 \uB418\uC796\uC544 "
-    cg: {fileID: 21300000, guid: c0c18927f3cb2574b9e9ca443cfe8928, type: 3}
-  - dialogue: "\uB098 \uC2E0\uACBD\uC4F0\uC9C0 \uB9C8 "
+  - dialogue: "\uB124. \uC5B4\uBA38\uB2C8."
     cg: {fileID: 21300000, guid: e64c481e15b72c8478314fecc7fd9851, type: 3}
 --- !u!222 &906487730
 CanvasRenderer:

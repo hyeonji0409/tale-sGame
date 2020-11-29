@@ -13,6 +13,7 @@ public class Jack_Controller : MonoBehaviour
     //마우스 건드리기
     [SerializeField] Transform tf_Crosshair;
 
+   // public static bool isCollide = false; //충돌 확인 변수
 
 
     // 스피드 조정 변수
@@ -71,7 +72,7 @@ public class Jack_Controller : MonoBehaviour
     {
         DontDestroyOnLoad(this.gameObject);
         boxCollider = GetComponent<BoxCollider>();
-         capsuleCollider = GetComponent<CapsuleCollider>();
+        capsuleCollider = GetComponent<CapsuleCollider>();
         myRigid = GetComponent<Rigidbody>();
         applySpeed = walkSpeed;
         capsule.GetComponent<Renderer>().enabled = false;
@@ -274,5 +275,10 @@ public class Jack_Controller : MonoBehaviour
             tf_Crosshair.localPosition = new Vector2(Input.mousePosition.x - (Screen.width / 2), Input.mousePosition.y - (Screen.height / 2));
         
     }*/
+
+  /*  IEnumerator WaitCollisioin()
+    {
+        yield return new WaitUntil();
+    } */
 
 }

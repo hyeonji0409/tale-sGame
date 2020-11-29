@@ -9,17 +9,16 @@ public class Dialogue
 {
     [TextArea]
     public string dialogue;
-    public Sprite cg;
 }
+
 
 public class first_talking : MonoBehaviour
 {
-    [SerializeField] private SpriteRenderer sprite_StandingCG;
 
-    [SerializeField] private SpriteRenderer sprite_DialogueBox;
+    public GameObject Mom;
 
-    [SerializeField]  private Text txt_Dialogue;
-
+    [SerializeField] private Image sprite_DialogueBox;
+    [SerializeField] private Text txt_Dialogue;
 
     private bool isDialogue = false;
 
@@ -27,49 +26,59 @@ public class first_talking : MonoBehaviour
 
     [SerializeField] private Dialogue[] dialogue;
 
-    public void ShowDialogue()
+    //다이얼로그 보여줌
+    public void ShowDialogue() 
     {
-        OnOff(true);
-        count = 0;
-        NextDialogue();
+       
+            sprite_DialogueBox.gameObject.SetActive(true);
+            txt_Dialogue.gameObject.SetActive(true);        
+            isDialogue = true;
+            count = 0;
+            NextDialogue();
+        
     }
 
-    private void OnOff(bool _flag)
-    {
-        sprite_DialogueBox.gameObject.SetActive(_flag);
-        sprite_StandingCG.gameObject.SetActive(_flag);
-        txt_Dialogue.gameObject.SetActive(_flag);
-        isDialogue = _flag;
-    }
-
+    //다이얼로그 숨김
     private void HideDialogue()
     {
         sprite_DialogueBox.gameObject.SetActive(false);
-        sprite_StandingCG.gameObject.SetActive(false);
-        txt_Dialogue.gameObject.SetActive(false);
+        txt_Dialogue.gameObject.SetActive(false);        
         isDialogue = false;
     }
 
+    //다음 대화 보여줌(다이얼로그)
     private void NextDialogue()
     {
         txt_Dialogue.text = dialogue[count].dialogue;
-        sprite_StandingCG.sprite = dialogue[count].cg;
         count++;
     }
+    
+    //엄마랑 닿았는지 충돌체크 해서 닿으면 ShowDialouge로 가서 보이게 해줌.
+    private void Check(Collision other)
+    {
+        if(other.gameObject.tag=="Mom")
+        {
+            ShowDialogue();
+        }
+    }
 
-    // Update is called once per frame
+    
+
+    //오른쪽 shift를 누르면 다음 대화를 보이게 하고 더 이상 대화가 없으면 다이얼로그 숨김처리.
     void Update()
     {
-        if (isDialogue)
+        
+        if(isDialogue)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if(Input.GetKeyDown(KeyCode.RightShift))
             {
-                if (count < dialogue.Length)
+                if(count<dialogue.Length)
                     NextDialogue();
                 else
-                    OnOff(false);
+                    HideDialogue();
             }
         }
+        
     }
 }
 
