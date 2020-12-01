@@ -30,11 +30,11 @@ public class first_talking : MonoBehaviour
     public void ShowDialogue() 
     {
        
-            sprite_DialogueBox.gameObject.SetActive(true);
-            txt_Dialogue.gameObject.SetActive(true);        
-            isDialogue = true;
-            count = 0;
-            NextDialogue();
+        sprite_DialogueBox.gameObject.SetActive(true);
+        txt_Dialogue.gameObject.SetActive(true);        
+        isDialogue = true;
+        count = 0;
+        NextDialogue();
         
     }
 
@@ -61,8 +61,6 @@ public class first_talking : MonoBehaviour
             ShowDialogue();
         }
     }
-
-    
 
     //오른쪽 shift를 누르면 다음 대화를 보이게 하고 더 이상 대화가 없으면 다이얼로그 숨김처리.
     void Update()

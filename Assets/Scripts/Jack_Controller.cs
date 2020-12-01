@@ -65,7 +65,7 @@ public class Jack_Controller : MonoBehaviour
     private Rigidbody myRigid;
 
     public GameObject capsule;
-
+   // public GameObject Mom;
   
     // Use this for initialization
     void Start()
@@ -82,8 +82,14 @@ public class Jack_Controller : MonoBehaviour
         applyCrouchPosY = originPosY;
     }
 
-
-
+   /*  private void Check(Collision other)
+    {
+        if(other.gameObject.tag=="Mom")
+        {
+           Destroy(Mom);
+        }
+    }
+*/
 
     // Update is called once per frame
     void Update()
