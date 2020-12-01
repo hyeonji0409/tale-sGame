@@ -78,7 +78,7 @@
      <Compile Include="Assets\Image\Giant&apos;s_House\Standard Assets\Effects\ImageEffects\Scripts\Vortex.cs" />
      <Compile Include="Assets\Scripts\ChatController.cs" />
      <Compile Include="Assets\Scripts\Jack_Controller.cs" />
-     <Compile Include="Assets\Scripts\first_talking.cs" />
+     <Compile Include="Assets\Scripts\Quiz_1.cs" />
      <None Include="Assets\Image\Giant&apos;s_House\Standard Assets\Effects\ImageEffects\Shaders\Tonemapper.shader" />
      <None Include="Assets\Image\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Shaders\VignettingShader.shader" />
      <None Include="Assets\Image\Giant&apos;s_House\Standard Assets\Effects\ImageEffects\Shaders\GlobalFog.shader" />

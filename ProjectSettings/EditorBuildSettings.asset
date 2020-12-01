@@ -8,7 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Sence/Jack's_House.unity
     guid: e07f2e400a2d7164988fa11609016066
-  - enabled: 1
+  - enabled: 0
     path: Assets/Sence/Script.unity
     guid: 5801e068549e1734eb510b2e76d8d9ed
+  - enabled: 1
+    path: Assets/Sence/Quiz_1.unity
+    guid: d7c503fb65731574ba6a65e886b18c50
+  - enabled: 1
+    path: Assets/Sence/realcloudhouse.unity
+    guid: 49cf8c5dc09576f4db14412dbe09941f
   m_configObjects: {}
